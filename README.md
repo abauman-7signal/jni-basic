@@ -10,6 +10,11 @@ implemented in C++. The C++ code was then added followed by compiling and linkin
 the code to create the `.jnilib`.
 
 
+### Prerequisites
+* JDK is installed
+* GNU g++ is installed. This was already the case since I was developing on a Mac.
+
+
 ### Building the Simplified Project
     $ ./build.sh
 
