@@ -31,6 +31,9 @@ It required changes to the build.sh script so created a new build script for Win
 
 Used the following tutorial to help: https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
 
-After building the project with `./buildForWin.sh`:
+To build (from cygwin command prompt):
+1. invoke `./buildForWin.sh`
+
+To run (from Windows command prompt -- NOT cygwin):
 1. copy `cygwin1.dll` to this folder
 2. invoke: `java -cp .\ -Djava.library.path=.\ HelloWorld`
