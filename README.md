@@ -23,3 +23,14 @@ the code to create the `.jnilib`.
     $ java HelloWorld
 
 should print the following to standard out: `Oh JNI, how cumbersome you are!`
+
+
+### Getting it to work by compiling from cygwin for Windows
+
+It required changes to the build.sh script so created a new build script for Windows.
+
+Used the following tutorial to help: https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
+
+After building the project with `./buildForWin.sh`:
+1. copy `cygwin1.dll` to this folder
+2. invoke: `java -cp .\ -Djava.library.path=.\ HelloWorld`
