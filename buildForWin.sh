@@ -16,6 +16,12 @@ function processStatusOfLastCommand() {
   fi
 }
 
+function clean() {
+  displayMessage "C L E A N I N G    B U I L D    A R T I F A C T S"
+  rm -v *.class
+  rm -v ${DLL_MODULE}.dll
+}
+
 function createHeaderForNativeInterface() {
   displayMessage "C R E A T I N G    J N I    H E A D E R    &    C L A S S  =>  ${DLL_MODULE}"
   javac -verbose -h . ${DLL_MODULE}.java
@@ -34,6 +40,8 @@ function buildJniLibrary() {
   processStatusOfLastCommand
 }
 
+clean
 createHeaderForNativeInterface
 buildNativeLibrary
 buildJniLibrary
+displayMessage "S U C C E S S !!!!"
